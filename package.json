@@ -1,0 +1,26 @@
+{
+  "name": "youtube-calendar",
+  "version": "1.0.0",
+  "description": "One Does YouTube Calendar app",
+  "main": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onedoes/youtube-calendar.git"
+  },
+  "author": "OneDoes",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/onedoes/youtube-calendar/issues"
+  },
+  "homepage": "https://github.com/onedoes/youtube-calendar",
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.15",
+    "gulp": "gulpjs/gulp#4.0",
+    "promised-del": "^1.0.2",
+    "systemjs-builder": "^0.10.6"
+  },
+  "scripts": {
+    "start": "gulp"
+  }
+}

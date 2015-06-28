@@ -1,0 +1,19 @@
+{
+  "name": "Youtube Calendar",
+  "short_name": "YouTubeCalendar",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "icons/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "start_url": "./"
+}
