@@ -1,0 +1,48 @@
+//
+//
+
+@import "youtube-calendar-app/common/styles/colors";
+
+// Reset
+
+body {
+  margin: 0;
+  background-color: hsl(0, 0%, 93%);
+  display: flex;
+}
+
+// Loader
+
+.ytc-loading {
+  $loader-size: 30px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: $loader-size;
+  width: $loader-size;
+
+  margin: auto;
+
+  // ytc-loading__spinner
+  &__spinner{
+
+    height: $loader-size;
+    width: $loader-size;
+
+    animation: ytc-loading-rotation 0.8s infinite linear;
+
+    border: 8px solid $cerulean;
+    border-right-color: transparent;
+    border-radius: 50%;
+  }
+
+}
+
+@keyframes ytc-loading-rotation {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}

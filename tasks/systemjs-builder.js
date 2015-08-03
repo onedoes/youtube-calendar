@@ -1,16 +1,32 @@
 //
 
+import path from 'path';
 import Builder from 'systemjs-builder';
-console.log(Builder);
+
 export default function (config) {
+  var {cwd, dest, src, isInSFXMode, builderOptions} = config;
 
-  function copyTask() {
-    return gulp.src(config.src,
-      { since: gulp.lastRun(copyTask.name) })
-      .pipe(gulp.dest(config.dest));
-  }
+  return function systemjsBuilderTask() {
+    var builder = new Builder();
 
-  copyTask.description = 'coping some files src->dest';
+    const buildFn = isInSFXMode ? builder.buildSFX.bind(builder) : builder.build.bind(builder);
 
-  return copyTask;
+    return builder
+      .loadConfig('jspm.config.js')
+      .then(function () {
+        builder.config({
+          "baseURL": 'file:' + path.resolve(process.cwd(), cwd),
+          "paths": {
+            "npm:*": 'file:' + path.resolve(process.cwd(), 'jspm_packages/npm') + '/*.js',
+            "github:*": 'file:' + path.resolve(process.cwd(), 'jspm_packages/github') + '/*.js'
+          }
+        });
+        return buildFn(
+          src,
+          dest,
+          builderOptions
+        );
+      });
+  };
+
 };

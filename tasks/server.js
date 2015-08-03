@@ -3,25 +3,27 @@
 import browserSync from 'browser-sync';
 import path from 'path';
 
-export default function ({outFolder}) {
+export const server = browserSync.create('localhost');
 
-  function serverTask(cb) {
-    browserSync({
+export default function ({outFolder}) {
+  function serverInitTask(cb) {
+    server.init({
+      logLevel: 'info',
       server: {
         baseDir: ['.', outFolder]
       },
-      files: path.resolve(outFolder, '**/*.+(js|css|html)'),
-      logConnections: true,
       open: false,
       ghostMode: false,
       https: true,
-      watchOptions: {
-        debounceDelay: 1000
-      }
+      ui: false
     }, cb);
   }
 
-  serverTask.description = 'The server task';
+  serverInitTask.description = 'The server task';
 
-  return serverTask;
+  return serverInitTask;
 };
+
+export function reload(){
+  return server.reload();
+}
