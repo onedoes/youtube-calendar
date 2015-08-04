@@ -1,6 +1,9 @@
 //
 
-(function () {
+(function ({
+  Promise,
+  System
+}) {
 
   Promise.all([
     System.import('reflect-metadata'),
@@ -8,4 +11,4 @@
   ])
   .then(::System.import('./youtube-calendar-app'));
 
-}(window.System));
+}(window));

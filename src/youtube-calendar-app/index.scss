@@ -1,11 +1,40 @@
 //
 
-youtube-calendar-app {
+@import "youtube-calendar-app/common/styles/colors";
+@import "youtube-calendar-app/common/styles/fill";
+
+//
+
+.calendar-view {
+  composes: fill from "./common/styles/fill.css";
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: $pampas;
+  height: 100%;
+  max-height: 480px;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.header {
   flex: 1;
 }
 
+.big-date{
+  font-size: 3rem;
+}
+
+.day {
+}
+
 .calendar {
-  display: flex;
-  flex: 1;
+  flex: 3;
 }

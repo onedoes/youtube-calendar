@@ -1,4 +1,15 @@
-<div class="calendar">
-<div class="day">24</div>
-<div class="month">January</div>
+<div [class]="style['calendar-view']">
+  <div [class]="style['container']">
+
+    <header [class]="style['header']">
+
+      <div [class]="style['big-date']">
+        <div [class]="style['day']">24</div>
+        <div [class]="style['month']">January</div>
+      </div>
+
+    </header>
+
+    <div [class]="style['calendar']"></div>
+  </div>
 </div>

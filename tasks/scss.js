@@ -8,6 +8,7 @@ export default function (config) {
   return function scssTask() {
     return gulp.src(src, {cwd})
       .pipe(sass({
+        includePaths: [src],
         outputStyle: 'expanded',
         precision: 3
       }).on('error', sass.logError))
