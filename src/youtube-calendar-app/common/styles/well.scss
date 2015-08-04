@@ -1,0 +1,13 @@
+//
+
+.well {
+
+  composes: shadow-z-2 from "./shadow.css";
+
+  background-color: #fff;
+  padding: 19px;
+  margin-bottom: 20px;
+  @extend .shadow-z-2;
+  border-radius: 2px;
+  border: 0;
+}

@@ -1,6 +1,11 @@
 //
 
-.title {
-  //composes: cyril from "./cyril.css";
-  color: red;
+youtube-calendar-app {
+  display: flex;
+  flex: 1;
+}
+
+.calendar {
+  display: flex;
+  flex: 1;
 }

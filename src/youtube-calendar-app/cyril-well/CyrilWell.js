@@ -5,7 +5,7 @@ import {Component, View} from 'angular2';
 import {CSSClass} from 'angular2';
 
 import cyrilWellHTMLTemplate from './index.html!text';
-//import cyrilWellStyle from './index.css!';
+import cyrilWellStyle from './index.css!';
 
 @Component({
   selector: 'cyril-well'
@@ -16,7 +16,7 @@ import cyrilWellHTMLTemplate from './index.html!text';
 })
 export default class CyrilWell{
   constructor(){
-    this.style = {};// cyrilWellStyle.default;
+    this.style = cyrilWellStyle.default;
   }
 }
 
