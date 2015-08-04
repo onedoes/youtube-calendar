@@ -23,11 +23,13 @@
     "gulp-inject": "^1.5.0",
     "gulp-sass": "^2.0.4",
     "hide-stack-frames-from": "^1.0.0",
+    "jspm": "^0.15.7",
     "lodash.debounce": "^3.1.1",
     "promised-del": "^1.0.2",
     "systemjs-builder": "^0.10.6"
   },
   "scripts": {
+    "postinstall": "jspm install",
     "start": "gulp"
   },
   "jspm": {
@@ -43,7 +45,7 @@
       "zone.js": "npm:zone.js@^0.5.1"
     },
     "devDependencies": {
-      "babel-core": "npm:babel-core@5.8.19",
+      "babel": "npm:babel-core@5.8.19",
       "babel-runtime": "npm:babel-runtime@5.8.19",
       "core-js": "npm:core-js@^0.9.4"
     }

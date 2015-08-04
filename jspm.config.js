@@ -1,6 +1,7 @@
 System.config({
   "transpiler": "babel",
   "babelOptions": {
+    "stage": 0,
     "optional": [
       "runtime"
     ]
@@ -9,8 +10,7 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
-  },
-  "trace": true
+  }
 });
 
 System.config({
