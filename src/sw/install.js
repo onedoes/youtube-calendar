@@ -1,6 +1,6 @@
 //
 
-import {staticCacheName} from 'constants';
+import {staticCacheName} from './constants';
 
 export default function serviceWorkerInstallation(event) {
   return event.waitUntil(

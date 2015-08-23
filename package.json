@@ -36,7 +36,7 @@
     "directories": {},
     "configFile": "jspm.config.js",
     "dependencies": {
-      "angular2": "npm:angular2@2.0.0-alpha.33",
+      "angular2": "npm:angular2@2.0.0-alpha.35",
       "css": "npm:jspm-loader-css-modules@^0.1.2",
       "css-global": "npm:jspm-loader-css@^0.1.6",
       "jspm-loader-css": "npm:jspm-loader-css@0.1.3",
